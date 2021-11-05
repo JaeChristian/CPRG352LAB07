@@ -19,10 +19,10 @@
                     <div class="addcontainer">
                         <div class="header">Add User</div>
                         <ul>
-                            <li><input type="email" name="email" placeholder="Email"></li>
-                            <li><input type="text" name="firstname" placeholder="First Name"></li>
-                            <li><input type="text" name="lastname" placeholder="Last Name"></li>
-                            <li><input type="password" name="password" placeholder="Password"></li>
+                            <li><input type="email" name="email" placeholder="Email" required></li>
+                            <li><input type="text" name="firstname" placeholder="First Name" required></li>
+                            <li><input type="text" name="lastname" placeholder="Last Name" required></li>
+                            <li><input type="password" name="password" placeholder="Password" required></li>
                             <li>
                                 <select name="role">
                                     <option value="regularuser">Regular User</option>
@@ -70,19 +70,19 @@
                     <div class="editcontainer">
                         <div class="header">Edit User</div>
                         <ul>
-                            <li><input type="email" name="emailedit" placeholder="Email" disabled></li>
-                            <li><input type="text" name="firstnameedit" placeholder="First Name"></li>
-                            <li><input type="text" name="lastnameedit" placeholder="Last Name"></li>
-                            <li><input type="password" name="passwordedit" placeholder="Password"></li>
+                            <li><input type="email" name="emailedit" placeholder="Email" value="${Eemail}"disabled></li>
+                            <li><input type="text" name="firstnameedit" placeholder="First Name" value="${Efirstname}"></li>
+                            <li><input type="text" name="lastnameedit" placeholder="Last Name" value="${Elastname}"></li>
+                            <li><input type="password" name="passwordedit" placeholder="Password" value=${Epassword}></li>
                             <li>
-                                <select name="roleedit">
-                                    <option value="regularuser">Regular User</option>
-                                    <option value="systemadmin">System Admin</option>
-                                    <option value="companyadmin">Company Admin</option>
+                                <select name="roleedit" value="systemadmin">
+                                    <option value="regularuser" <c:if test="${selectedUser.role==2}">selected</c:if>>Regular User</option>
+                                    <option value="systemadmin" <c:if test="${selectedUser.role==1}">selected</c:if>>System Admin</option>
+                                    <option value="companyadmin" <c:if test="${selectedUser.role==3}">selected</c:if>>Company Admin</option>
                                 </select>
                             </li>
                         </ul>
-                        <div class="active"><label>Active: </label><input type="checkbox" name="activeedit"></div>
+                                        <div class="active"><label>Active: </label><input type="checkbox" name="activeedit" <c:if test="${isActive}">checked</c:if>></div>
                         <div class="save">
                             <input type="submit" value="Save">
                             <input type="hidden" name="action" value="save">
