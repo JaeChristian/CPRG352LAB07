@@ -73,7 +73,7 @@
                             <li><input type="email" name="emailedit" placeholder="Email" value="${Eemail}"disabled></li>
                             <li><input type="text" name="firstnameedit" placeholder="First Name" value="${Efirstname}"></li>
                             <li><input type="text" name="lastnameedit" placeholder="Last Name" value="${Elastname}"></li>
-                            <li><input type="password" name="passwordedit" placeholder="Password" value=${Epassword}></li>
+                            <li><input type="text" name="passwordedit" placeholder="Password" value=${Epassword}></li>
                             <li>
                                 <select name="roleedit" value="systemadmin">
                                     <option value="regularuser" <c:if test="${eRole==2}">selected</c:if>>Regular User</option>
