@@ -76,9 +76,9 @@
                             <li><input type="password" name="passwordedit" placeholder="Password" value=${Epassword}></li>
                             <li>
                                 <select name="roleedit" value="systemadmin">
-                                    <option value="regularuser" <c:if test="${selectedUser.role==2}">selected</c:if>>Regular User</option>
-                                    <option value="systemadmin" <c:if test="${selectedUser.role==1}">selected</c:if>>System Admin</option>
-                                    <option value="companyadmin" <c:if test="${selectedUser.role==3}">selected</c:if>>Company Admin</option>
+                                    <option value="regularuser" <c:if test="${eRole==2}">selected</c:if>>Regular User</option>
+                                    <option value="systemadmin" <c:if test="${eRole==1}">selected</c:if>>System Admin</option>
+                                    <option value="companyadmin" <c:if test="${eRole==3}">selected</c:if>>Company Admin</option>
                                 </select>
                             </li>
                         </ul>
